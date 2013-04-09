@@ -3,9 +3,9 @@
     var scope, mainCtrl;
 
     beforeEach(module("Application.Controllers"));
-    beforeEach(inject(function($controller) {
+    beforeEach(inject(function($rootScope, $controller) {
 
-        scope = {};
+        scope = $rootScope.$new();
         mainCtrl = $controller("MainCtrl", { $scope: scope });
 
 
